@@ -5,10 +5,10 @@ import pandas as pd
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = "shahban_super_secret_key"
+app.secret_key = "shawre_super_secret_key"
 
 # بەستنەوە بە داتابەیسی ڕێندەر
-MYSQL_URL = "mysql+pymysql://root:HITVDFaMFehpQFmWrZlnaTKtavNtBZyw@sakura.proxy.rlwy.net:31707/shahban"
+MYSQL_URL = "mysql+pymysql://root:HITVDFaMFehpQFmWrZlnaTKtavNtBZyw@sakura.proxy.rlwy.net:31707/shawre"
 engine = create_engine(MYSQL_URL, pool_recycle=3600, pool_pre_ping=True)
 
 # ئامادەکردنی داتابەیس
@@ -83,9 +83,9 @@ BASE_TEMPLATE = """
             document.documentElement.style.setProperty('--bg-dark', t.bg);
             document.documentElement.style.setProperty('--bg-card', t.card);
             document.documentElement.style.setProperty('--border-color', t.border);
-            localStorage.setItem('shahban_theme_name', name);
+            localStorage.setItem('shawre_theme_name', name);
         }
-        const savedTheme = localStorage.getItem('shahban_theme_name') || 'gold';
+        const savedTheme = localStorage.getItem('shawre_theme_name') || 'gold';
         applyTheme(savedTheme);
     </script>
     <style>
@@ -225,10 +225,10 @@ def login():
                 document.documentElement.style.setProperty('--bg-dark', t.bg);
                 document.documentElement.style.setProperty('--bg-card', t.card);
                 document.documentElement.style.setProperty('--border-color', t.border);
-                localStorage.setItem('shahban_theme_name', name);
+                localStorage.setItem('shawre_theme_name', name);
             }
             window.onload = function() {
-                const savedTheme = localStorage.getItem('shahban_theme_name') || 'gold';
+                const savedTheme = localStorage.getItem('shawre_theme_name') || 'gold';
                 applyTheme(savedTheme);
             }
         </script>
